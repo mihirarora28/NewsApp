@@ -3,10 +3,6 @@ import 'package:news_app/Providers/news.dart';
 import 'package:news_app/Providers/provider.dart';
 import 'package:provider/provider.dart';
 class CardViews extends StatelessWidget {
-  // final String Title;
-  // final String description;
-  // final String published;
-  // final String id;
   final News news;
   CardViews({required this.news});
   @override
@@ -36,39 +32,38 @@ class CardViews extends StatelessWidget {
                    Container(
                     padding: EdgeInsets.all(10),
                     width: MediaQuery.of(context).size.width*0.6,
-                    child: Flexible(
+
                       child: Text(Title == null ? " ": news.title.toString(), maxLines: 2,
                         style: TextStyle(fontWeight: FontWeight.bold),
-                        softWrap: true,
+
                         overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.justify,
+
                       ),
-                    ),
+
                   ),
                   Container(
                     padding: EdgeInsets.all(10),
                     width: MediaQuery.of(context).size.width*0.6,
-                    child: Flexible(
                       child: Text((news.description.toString().length == 0) ? " ":news.description.toString(), maxLines: 3,
                         style: TextStyle(fontWeight: FontWeight.normal),
-                        softWrap: true,
+
                         overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.justify,
+
                       ),
-                    ),
+
                   ),
                   Container(
                     padding: EdgeInsets.all(10),
                     width: MediaQuery.of(context).size.width*0.6,
-                    child: Flexible(
+
                       child: Text(news.published == null ? " ":news.published.toString(), maxLines: 1,
 
                         style: TextStyle(fontWeight: FontWeight.normal,color: Colors.black54),
-                        softWrap: true,
+
                         overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.justify,
+
                       ),
-                    ),
+
                   ),
 
                 ],
